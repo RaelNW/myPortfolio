@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Rael Portfolio</title>
 </head>
-<body>
+
+<body class="root" id="root">
     <nav>
-        <header>
-            <h1 class="title">Rael's Portfolio</h1>
-        </header>
-        <div class="titles">
-            <h4 class="about">About</h4>
-            <h4 class="work">Work</h4>
-            <h4 class="contact">Contact Me</h4>
-            <h4 class="resume">Resume</h4>
-        </div>
-    </nav> 
+        <h1 class="header">Rael's <br>Portfolio</h1>
+        <a href="#about" class="titles">About</a>
+        <a href="#projects" class="titles">Work</a>
+        <a href="#contact" class="titles">Contact Me</a>
+        <a href="#resume" class="titles">Resume</a>
+    </nav>
     <div class="subtitle">
         <h2>Here is a preview of what I have done before</h2>
     </div>
     <div class="main">
-        <div class="about"> 
-            <h1>About Me</h1>
-                <p></p>
+        <!-- Profile picture to the left -->
+        <div class="profile-picture">
+            <img src="./assets/images/portfolioPic.jpg" alt="RaelNW">
         </div>
-        <div class="work">
-            <h1>Work</h1>
-            <p></p>
-        </div>
-        <div class="contact">
-            <h1></h1>
-            <p></p>
+        <!-- Content to the right -->
+        <div class="content">
+            <div class="about">
+                <div>About Me</div>
+                <p>I am an enthusiastic person with a background in communication and media.
+                    Originally from Kenya but currently living in the United States.
+                    I am currently working as a nurse assistant and on my free time
+                    I am pursuing my new-found love for software development
+                    and open to mentors in this field!</p>
+            </div>
+            <div>Work</div>
+            <div class="projects">
+                <section class="card" id="class1">
+                    <h1>Password Generator</h1>
+                    <img src="./assets/images/password.png" alt="password">
+                </section>
+                <section class="card">
+                    <h1 >Weather Api</h1>
+                    <img src="./assets/images/weatherDashboard.jpg" alt="weather">
+                </section>
+                <section class="card">
+                    <h1>Group Project1</h1>
+                    <img src="./assets/images/No-Fox-Given.jpg" alt="groupProject1">
+                </section>
+                <section class="card">
+                    <h1>Future Projects</h1>
+                    <img src="./assets/images/Future.jpg" alt="future">
+                </section>
+            </div>
         </div>
     </div>
 
+    <footer>
+        <div class="Contact">Connect with me:</div>
+        <a href="https://www.linkedin.com/in/raelwanjala/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/RaelNW" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/dance.dada/" target="_blank">Instagram</a>
+    </footer>
 </body>
+
 </html>
