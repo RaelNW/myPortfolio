@@ -1,4 +1,4 @@
-#root {
+/* #root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -10,10 +10,19 @@ img{
     margin-right: 20px;
     max-width: 150px;
 }
+.right{
+    float:left;
+    width: 30%;
+   border-right: 2px solid black;
+    padding-right: 20px;
+    width: calc(50% - 1px);
+    box-sizing: border-box;
+}
 .main {
     justify-content: left;
     flex-wrap: wrap;
-    clear:both
+    clear:both;
+    display: flex;
 }
 .content{
     float: right;
@@ -30,7 +39,7 @@ nav{
 .subtitle{
     display: flex;
     flex-direction: row-reverse;
-    background-color: blueviolet;
+    background-color: #fff;
 }
 
 
@@ -47,9 +56,9 @@ nav{
     grid-gap: 20px;
     max-width: 9000px;
     /* Adjust to your desired max width */
-    margin: 0 auto;
+    /*margin: 0 auto;
 }
-
+/*
 footer {
     background-color: #333;
     color: #fff;
@@ -71,5 +80,185 @@ footer a {
 @media screen and (max-width: 992px) {
     header {
         background:slateblue;
+    }
+} */
+
+/* Base styles for the entire page */
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #B9FFFC;
+    padding: 1em;
+    text-align: center;
+}
+
+
+nav h1 {
+    margin: 0;
+    font-size: 2.5em;
+    line-height: 1.1;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav {
+    margin-right: 20px;
+}
+
+/* Links and anchor styles */
+a {
+    font-weight: 500;
+    color: #16dada;
+    text-decoration: inherit;
+    justify-content: space-evenly;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+/* Body styles */
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #7579E7;
+}
+
+
+/* Project content section styles */
+.projects {
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 9000px;
+    /* Adjust to your desired max width */
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 0 0 400px;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card img {
+    max-width: 70%;
+}
+
+.card p {
+    margin-top: 10px;
+}
+
+.card a {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: medium;
+    color: #16dada;
+}
+/* Define a CSS class to apply the hover effect */
+img:hover {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover (adjust as needed) */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition */
+}
+
+.card a:hover {
+    color: black;
+}
+
+/* Container styles for content */
+.footer-container {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Unstyled list items for the footer */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.footer img {
+    max-width: 150px;
+}
+
+
+/* About container styles */
+.about-container {
+    background-color: #9AB3F5;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 40vh;
+    /* Set a minimum height of 100% of the viewport height */
+    max-height: 40vh;
+}
+
+p {
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+img {
+    float: left;
+    margin-right: 20px;
+    max-width: 150px;
+}
+
+/* Media query for light mode */
+@media screen and (max-width: 992px) {
+    header {
+        background: slateblue;
+    }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
     }
 }
