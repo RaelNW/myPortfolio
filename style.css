@@ -1,237 +1,174 @@
-/* #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-     margin: 0 10px;
-     background-color: aquamarine;
-}
-img{
-    float: left;
-    margin-right: 20px;
-    max-width: 150px;
-}
-.right{
-    float:left;
-    width: 30%;
-   border-right: 2px solid black;
-    padding-right: 20px;
-    width: calc(50% - 1px);
-    box-sizing: border-box;
-}
-.main {
-    justify-content: left;
-    flex-wrap: wrap;
-    clear:both;
-    display: flex;
-}
-.content{
-    float: right;
-    width: 70%;
-
-}
-nav{
-    background-color: #333;
-}
-
-.titles {
-    float: right;
-}
-.subtitle{
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: #fff;
-}
-
-
-.card {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    padding: 10px;
-    flex: 0 0 400px;
-}
-.projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    max-width: 9000px;
-    /* Adjust to your desired max width */
-    /*margin: 0 auto;
-}
-/*
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-
-
-@media screen and (max-width: 992px) {
-    header {
-        background:slateblue;
-    }
-} */
-
-/* Base styles for the entire page */
+/* Reset and base styles */
 :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* Define variables for consistent use of colors and fonts */
+    --primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --primary-color: rgba(255, 255, 255, 0.87);
+    --bg-color: #535c53;
+    --link-color: #16dada;
+}
+
+/* Global styles */
+body {
+    /* Apply base font and colors */
+    font-family: var(--primary-font);
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
-/* Header styles */
-.header {
+/* Links and anchor styles */
+a {
+    /* Styling for links */
+    font-weight: 500;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    /* Style on hover */
+    color: #535bf2;
+}
+
+/* Other CSS styles */
+
+nav {
+    /* Navigation bar layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-container {
+    /* Header container */
     display: flex;
     align-items: center;
-    background-color: #B9FFFC;
-    padding: 1em;
-    text-align: center;
 }
 
-
-nav h1 {
+.header {
+    /* Title styling */
     margin: 0;
     font-size: 2.5em;
     line-height: 1.1;
     color: #1a1a1a;
     font-weight: bold;
     margin-left: 20px;
+    /* Margin added to separate the header from the buttons */
 }
 
-.nav {
-    margin-right: 20px;
+.buttons {
+    /* Container for buttons */
+    display: flex;
+    justify-content: flex-end;
+    /* Align buttons to the right */
+    gap: 10px;
+    /* Adjust the spacing between buttons */
 }
 
-/* Links and anchor styles */
-a {
-    font-weight: 500;
-    color: #16dada;
-    text-decoration: inherit;
-    justify-content: space-evenly;
+.button {
+    /* Styling for buttons */
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    color: #535bf2;
+.button:hover {
+    /* Style on button hover */
+    background-color: #0056b3;
 }
-
-/* Body styles */
-body {
-    margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
-    background-color: #7579E7;
-}
-
 
 /* Project content section styles */
 .projects {
-    border: 1px solid #ccc;
+    /* Styling for project grid */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     max-width: 9000px;
-    /* Adjust to your desired max width */
     margin: 0 auto;
     padding: 5px;
 }
 
 .card {
-    border-style: solid;
-    border-width: 1px;
+    /* Styling for individual cards */
+    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
     flex: 0 0 400px;
 }
 
 .card h1 {
+    /* Header in cards */
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .card img {
+    /* Styling for images within cards */
     max-width: 70%;
 }
 
 .card p {
+    /* Styling for paragraphs within cards */
     margin-top: 10px;
 }
 
 .card a {
+    /* Styling for links within cards */
     display: block;
     margin-top: 10px;
     font-weight: bold;
     font-size: medium;
-    color: #16dada;
-}
-/* Define a CSS class to apply the hover effect */
-img:hover {
-    transform: scale(1.1);
-    /* Scale the image by 10% on hover (adjust as needed) */
-    transition: transform 0.3s ease;
-    /* Add a smooth transition */
+    color: var(--link-color);
 }
 
 .card a:hover {
+    /* Style on link hover */
     color: black;
 }
 
-/* Container styles for content */
+/* Footer styles */
 .footer-container {
+    /* Styling for footer container */
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-/* Unstyled list items for the footer */
 .list-unstyled {
+    /* Unstyled list items for footer */
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-evenly;
 }
 
-
 .footer img {
+    /* Styling for footer images */
     max-width: 150px;
 }
 
-
 /* About container styles */
 .about-container {
+    /* Styling for about section container */
     background-color: #9AB3F5;
     padding: 20px;
     margin: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     min-height: 40vh;
-    /* Set a minimum height of 100% of the viewport height */
     max-height: 40vh;
 }
 
 p {
+    /* Styling for paragraphs */
     font-size: 16px;
     margin: 0 0 10px;
     color: #1a1a1a;
@@ -239,9 +176,22 @@ p {
 }
 
 img {
+    /* Styling for images */
     float: left;
     margin-right: 20px;
     max-width: 150px;
+}
+img:hover {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover (adjust as needed) */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition */
+}
+footer img:hover {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover (adjust as needed) */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition */
 }
 
 /* Media query for light mode */
